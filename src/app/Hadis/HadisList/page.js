@@ -1,11 +1,26 @@
-
+'use client'
 import Navbar from '@/components/Navbar';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import HadisHeading from './HadisHeading';
+import HadisName from './HadisName';
+
 
 const HadisList = () => {
+    
+  const [chapters, setChapters] = useState([]);
+
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/chapter')
+        .then(res=> res.json())
+        .then(data => setChapters(data))
+       },[])
+    
+     
     return (
-        <div className=' h-[85vh] rounded-[15px] bg-white  w-1/2 m-5'>
-           <h1>dccskdhc</h1>
+        <div className=' h-[85vh] rounded-[15px]  w-1/2 m-5'>
+            <HadisHeading/>
+            <HadisName/>
         </div>
     );
 };
