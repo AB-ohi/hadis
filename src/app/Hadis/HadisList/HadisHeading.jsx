@@ -23,10 +23,10 @@ const HadisHeading = () => {
                     <div className='flex w-[95%] justify-between items-center'>
                         
                         <div>
-                            <h1>{book.title}</h1>
-                            <p>সর্বমোট হাদিস - {book.number_of_hadis}</p>
+                            <h1 className='text-[22px]'>{book.title}</h1>
+                            <p className='text-[12px]'>সর্বমোট হাদিস - {book.number_of_hadis}</p>
                         </div>
-                        <h1>{book.title_ar}</h1>
+                        <h1 className='text-[30px] font-bold'>{book.title_ar}</h1>
                     </div>
                 </div>)
             }

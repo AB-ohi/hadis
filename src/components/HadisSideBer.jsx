@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import './style.css'
 
 const HadisSideBer = () => {
-  const [activeTab, setActiveTab] = useState("books");
+  const [activeTab, setActiveTab] = useState("chapters");
 
   const [books, setBooks] = useState([]);
   const [chapters, setChapters] = useState([]);
@@ -69,10 +69,10 @@ const HadisSideBer = () => {
                 <p className="hexagon">{index+1}</p>
               </div>
               <div>
-                <h1>
+                <h1 className="text-[17px] mb-2">
                     {chapter.title}
                 </h1>
-                <p>হাদিসের রেঞ্জ:{chapter.hadis_range}</p>
+                <p className="text-[12px] text-slate-400">হাদিসের রেঞ্জ:{chapter.hadis_range}</p>
               </div>
             </div>
           
