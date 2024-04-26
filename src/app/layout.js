@@ -1,5 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import SideList from "@/components/Sideber";
+import HadisList from "./Hadis/HadisList/page";
+import HadisSideBer from "@/components/HadisSideBer";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar/>
+        <div className="flex ">
+        <SideList/>
+        {children}
+        </div>
+        </body>
     </html>
   );
 }
