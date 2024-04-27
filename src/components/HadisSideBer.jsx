@@ -15,15 +15,27 @@ const HadisSideBer = () => {
   };
 
   useEffect(()=>{
-    fetch('http://localhost:5000/chapter')
-    .then(res=> res.json())
-    .then(data => setChapters(data))
+    fetch("https://server-adx76x9xt-abohis-projects.vercel.app/chapter")
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })
+    .then((data) =>  setChapters(data))
+    .catch((error) => console.error('Error fetching data:', error));
    },[])
 
   useEffect(()=>{
-    fetch('http://localhost:5000/books')
-    .then(res => res.json())
-    .then(data=> setBooks(data))
+    fetch("https://server-adx76x9xt-abohis-projects.vercel.app/books")
+    .then((res) => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })
+    .then((data) => setBooks(data))
+    .catch((error) => console.error('Error fetching data:', error));
   },[])
   return (
     <div className=" h-[85vh] rounded-[15px] bg-white  w-1/5 m-5">

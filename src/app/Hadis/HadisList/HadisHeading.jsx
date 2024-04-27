@@ -8,7 +8,7 @@ const HadisHeading = () => {
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/books')
+        fetch('https://server-adx76x9xt-abohis-projects.vercel.app/books')
         .then(res => res.json())
         .then(data=> setBooks(data))
       },[])

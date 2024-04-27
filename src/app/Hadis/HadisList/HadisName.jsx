@@ -6,9 +6,15 @@ const HadisName = () => {
     const [chapters, setChapters] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/chapter')
-        .then(res=> res.json())
-        .then(data => setChapters(data))
+        fetch("https://server-adx76x9xt-abohis-projects.vercel.app/chapter")
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then((data) => setChapters(data))
+        .catch((error) => console.error('Error fetching data:', error));
        },[])
     return (
         <div className='w-full bg-white rounded-[11px] p-5 my-5'>
@@ -20,7 +26,8 @@ const HadisName = () => {
                 >
                     <p className='px-[20px] py-[15px] rounded-[11px] bg-[#2B9E76] text-white'>{chapter.chapter_id}</p>
                     <h1>{chapter.title}</h1>
-                </div>)
+                </div>
+                )
             }
         </div>
     );
