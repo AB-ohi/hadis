@@ -5,17 +5,22 @@ const HadisName = () => {
 
     const [chapters, setChapters] = useState([])
 
-    useEffect(()=>{
-        fetch("https://server-adx76x9xt-abohis-projects.vercel.app/chapter")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch("https://toy-marketplace-server-8o1xb7a8p-ab-ohi.vercel.app/allToy");
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                setChapters(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
             }
-            return res.json();
-        })
-        .then((data) => setChapters(data))
-        .catch((error) => console.error('Error fetching data:', error));
-       },[])
+        };
+    
+        fetchData();
+    }, []);
     return (
         <div className='w-full bg-white rounded-[11px] p-5 my-5'>
             {

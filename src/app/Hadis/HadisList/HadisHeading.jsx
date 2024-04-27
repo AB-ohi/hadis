@@ -7,11 +7,22 @@ const HadisHeading = () => {
 
 
 
-    useEffect(()=>{
-        fetch('https://server-adx76x9xt-abohis-projects.vercel.app/books')
-        .then(res => res.json())
-        .then(data=> setBooks(data))
-      },[])
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch("https://toy-marketplace-server-8o1xb7a8p-ab-ohi.vercel.app/toys");
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setBooks(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    fetchData();
+}, []);
     return (
         <div>
             {

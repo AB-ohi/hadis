@@ -14,31 +14,40 @@ const HadisSideBer = () => {
     setActiveTab(tab);
   };
 
-  useEffect(()=>{
-    fetch("https://server-adx76x9xt-abohis-projects.vercel.app/chapter")
-    .then((res) => {
-        if (!res.ok) {
-            throw new Error('Network response was not ok');
+  useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch("https://toy-marketplace-server-8o1xb7a8p-ab-ohi.vercel.app/allToy");
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setChapters(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
         }
-        return res.json();
-    })
-    .then((data) =>  setChapters(data))
-    .catch((error) => console.error('Error fetching data:', error));
-   },[])
+    };
 
-  useEffect(()=>{
-    fetch("https://server-adx76x9xt-abohis-projects.vercel.app/books")
-    .then((res) => {
-        if (!res.ok) {
-            throw new Error('Network response was not ok');
+    fetchData();
+}, []);
+   useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch("https://toy-marketplace-server-8o1xb7a8p-ab-ohi.vercel.app/toys");
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setBooks(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
         }
-        return res.json();
-    })
-    .then((data) => setBooks(data))
-    .catch((error) => console.error('Error fetching data:', error));
-  },[])
+    };
+
+    fetchData();
+}, []);
   return (
-    <div className=" h-[85vh] rounded-[15px] bg-white  w-1/5 m-5">
+    <div className=" h-[85vh] rounded-[15px] bg-white  md:w-1/5 w-[90%] m-5">
       <div className="flex justify-between">
         <button onClick={()=>  handleTabClick("books")} className= {activeTab === "books" ? "active bg-[#2B9E76] text-center w-1/2 py-3 text-white rounded-ss-[15px]" : "text-center w-1/2 "}>বই</button>
 

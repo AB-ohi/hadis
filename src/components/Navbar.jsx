@@ -8,7 +8,7 @@ import SideList from "./Sideber";
 const Navbar = () => {
   return (
     <div>
-      <div className="flex items-center justify-between mt-3 w-[98%] m-auto">
+      <div className="flex md:flex-row md:gap-0 gap-3 flex-col md:items-center justify-start md:justify-between mt-3 w-[98%] m-auto">
       <div className="flex items-center gap-[25px]">
         <Image className="w-11" src={home} alt="home" />
         <div className="">
@@ -16,7 +16,7 @@ const Navbar = () => {
           <p className="text-[13px]">হাদিস পড়ুন শিখুন এবং জানুন</p>
         </div>
       </div>
-      <div className="flex gap-20">
+      <div className="flex md:gap-20 gap-5">
         <div className="flex items-center gap-2 p-3 border-solid border-2 rounded-[11px] border-gray-300">
           <CiSearch className="text-xl" />
           <input

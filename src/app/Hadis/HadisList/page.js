@@ -8,7 +8,7 @@ const HadisList = () => {
     
 
     return (
-        <div className=' h-[85vh] rounded-[15px] overflow-auto  w-1/2 m-5'>
+        <div className=' h-[85vh] rounded-[15px] overflow-auto  md:w-1/2 w-[90%] m-5'>
             <HadisHeading/>
             <HadisName/>
             <HadisMain/>

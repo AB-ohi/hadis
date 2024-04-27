@@ -7,7 +7,7 @@ import LeftSideBer from '@/components/LeftSideBer';
 
 const layout = ({children}) => {
     return (
-        <div className='h-[90vh] flex justify-between w-full bg-slate-100 rounded-ss-[15px] mt-4'>
+        <div className='md:h-[90vh] h-full flex md:flex-row flex-col justify-between w-full bg-slate-100 rounded-ss-[15px] mt-4'>
            <HadisSideBer/>
            {children}
            <LeftSideBer/>
