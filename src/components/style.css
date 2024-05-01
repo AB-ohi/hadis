@@ -6,3 +6,8 @@
      margin-right: 10px;
     color: white;
 }
+
+body{
+    margin: 0;
+    border: 0;
+}

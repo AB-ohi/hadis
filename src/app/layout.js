@@ -16,11 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className }>
+        <div className="md:bg-white bg-gray-100">
         <Navbar/>
-        <div className="flex ">
+        <div className="flex md:flex-row flex-col-reverse">
         <SideList/>
         {children}
+        </div>
         </div>
         </body>
     </html>

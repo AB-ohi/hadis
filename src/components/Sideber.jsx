@@ -29,11 +29,11 @@ const SideList = () => {
         },
     ]
     return (
-        <div className='my-auto md:overflow-hidden overflow-y-scroll w-24 flex items-center justify-center gap-10 flex-col'>
+        <div className='my-auto md:w-24 w-full flex items-center justify-center gap-10  md:flex-col bg-white  bottom-0 md:relative fixed'>
             {
                 SideLists.map((SideList, index)=>
-                <div  className='hover:bg-[#2B9E76] transition-[0.8s] hover:rounded-[10px] p-4' key={index}>
-                    <Image src={SideList.img} alt=''/>
+                <div  className='hover:bg-[#2B9E76] flex  transition-[0.8s] hover:rounded-[10px] p-4'  key={index}>
+                    <Image className='text-black' src={SideList.img} alt=''/>
                 </div>)
             }
         </div>
