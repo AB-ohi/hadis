@@ -1,4 +1,4 @@
-
+import '../app/globals.css'
 import home from '../../public/home.svg'
 import book from '../../public/book.svg'
 import subject from '../../public/subject.svg'
@@ -29,7 +29,8 @@ const SideList = () => {
         },
     ]
     return (
-        <div className='my-auto md:w-24 w-full flex items-center justify-center gap-10  md:flex-col bg-white  bottom-0 md:relative fixed'>
+        <div className='my-auto md:w-24 w-full flex items-center justify-center gap-10  md:flex-col bg-white  bottom-0 md:relative fixed sideNav'
+        >
             {
                 SideLists.map((SideList, index)=>
                 <div  className='hover:bg-[#2B9E76] flex  transition-[0.8s] hover:rounded-[10px] p-4'  key={index}>

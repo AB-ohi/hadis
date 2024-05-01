@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-family: 'AdorshoLipi', sans-serif;
+}
+.sideNav{
+    box-shadow: none;
+} 
+
+.nav{
+    box-sizing: none!;
+}
+
+@media (max-width: 800px) {
+    .sideNav{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px -6px 7px 0px;
+    } 
+    .nav{
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    }
+  }

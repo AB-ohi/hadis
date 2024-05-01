@@ -1,3 +1,4 @@
+import '../app/globals.css'
 import Image from "next/image";
 import React from "react";
 import home from "../../public/home-logo.png";
@@ -9,11 +10,12 @@ import { RiSettings2Fill } from "react-icons/ri";
 const Navbar = () => {
   return (
     <div>
-      <div className="flex md:gap-0 gap-3 items-center justify-between   bg-white py-3 px-2">
+      <div className="flex md:gap-0 gap-3 items-center justify-between  bg-white py-3 px-2 nav">
       <div className="flex items-center gap-[25px]">
         <Image className="w-11" src={home} alt="home" />
         <div className="">
-          <h1 className="font-bold md:text-black text-[#2B9E76]">হাদিস সমূহ</h1>
+          <h1 className="font-bold md:block hidden md:text-black text-[#2B9E76]">হাদিস সমূহ</h1>
+          <h1 className="font-bold block md:hidden text-[25px] md:text-black text-[#2B9E76]">আল হাদিস</h1>
           <p className="text-[13px] md:block hidden">হাদিস পড়ুন শিখুন এবং জানুন</p>
         </div>
       </div>

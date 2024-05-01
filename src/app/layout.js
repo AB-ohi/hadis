@@ -5,7 +5,6 @@ import SideList from "@/components/Sideber";
 import HadisList from "./Hadis/HadisList/page";
 import HadisSideBer from "@/components/HadisSideBer";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,7 +15,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className }>
+      <head>
+      <link href="https://fonts.maateen.me/adorsho-lipi/font.css" rel="stylesheet"/>
+      </head>
+      <body className={inter.className} style={{fontFamily:'AdorshoLipi, sans-serif'}}>
         <div className="md:bg-white bg-gray-100">
         <Navbar/>
         <div className="flex md:flex-row flex-col-reverse">
