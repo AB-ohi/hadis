@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import './style.css'
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const HadisSideBer = () => {
   const [activeTab, setActiveTab] = useState("chapters");
@@ -47,7 +48,8 @@ const HadisSideBer = () => {
     fetchData();
 }, []);
   return (
-    <div className=" h-[85vh] rounded-[15px] bg-white  md:w-1/5 w-[90%] m-5">
+    <div className="md:w-1/5 w-[90%] m-5">
+    <div className=" h-[85vh] rounded-[15px] bg-white md:block hidden ">
       <div className="flex justify-between">
         <button onClick={()=>  handleTabClick("books")} className= {activeTab === "books" ? "active bg-[#2B9E76] text-center w-1/2 py-3 text-white rounded-ss-[15px]" : "text-center w-1/2 "}>বই</button>
 
@@ -103,6 +105,13 @@ const HadisSideBer = () => {
         )}
       </div>
     </div>
+     <div className='bg-white md:hidden flex items-center rounded-[11px] px-3 py-5 gap-3'>
+     <div className="text-[25px]">
+     <RxHamburgerMenu />
+     </div>
+     <h1>সহিহ বুখারী</h1>
+     </div>
+     </div>
   );
 };
 

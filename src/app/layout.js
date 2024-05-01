@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className} style={{fontFamily:'AdorshoLipi, sans-serif'}}>
         <div className="md:bg-white bg-gray-100">
         <Navbar/>
-        <div className="flex md:flex-row flex-col-reverse">
+        <div className="flex md:flex-row flex-col-reverse md:mt-0 mt-10">
         <SideList/>
         {children}
         </div>

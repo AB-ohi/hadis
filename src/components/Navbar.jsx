@@ -9,7 +9,7 @@ import { RiSettings2Fill } from "react-icons/ri";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className='top-0 md:relative fixed w-full'>
       <div className="flex md:gap-0 gap-3 items-center justify-between  bg-white py-3 px-2 nav">
       <div className="flex items-center gap-[25px]">
         <Image className="w-11" src={home} alt="home" />

@@ -6,6 +6,7 @@ import bookmark from '../../public/bookmark.svg'
 import others from '../../public/others.svg'
 import goto from '../../public/goto.svg'
 import Image from 'next/image';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const SideList = () => {
     const SideLists = [
@@ -37,6 +38,7 @@ const SideList = () => {
                     <Image className='text-black' src={SideList.img} alt=''/>
                 </div>)
             }
+           
         </div>
     );
 };

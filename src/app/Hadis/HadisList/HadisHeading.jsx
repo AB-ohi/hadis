@@ -24,7 +24,7 @@ const HadisHeading = () => {
     fetchData();
 }, []);
     return (
-        <div>
+        <div className='md:block hidden'>
             {
                 books.map((book)=>
                 <div className='flex items-center p-5 bg-white rounded-[15px] w-[100%]' key={book._id}>

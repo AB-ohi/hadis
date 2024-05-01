@@ -29,7 +29,7 @@ const HadisMain = () => {
     fetchData();
 }, []);
   return (
-    <div className="w-full">
+    <div className="md:w-full md:bg-none bg-slate-100">
       {hadiths.map((hadith, index) => (
         <div key={hadith._id}>
          {
@@ -70,17 +70,26 @@ const HadisMain = () => {
 
          }
           <div className=" bg-white p-5 my-5 rounded-[15px]">
+            <div className="flex justify-between">
             <div className="flex items-center gap-2">
               <Image className="w-[26px]" src={icon} alt="img"/>
               <p className="text-[#2B9E76]">{hadith.id}</p>
+            </div>
+            <div className="md:hidden ">
+            <div className="flex items-center text-[12px] gap-3">
+              <p>হাদিসের মান :</p>
+              <button className="p-2 rounded-[8px] text-white font-bold bg-[#2B9E76]">সহিহ হাদিস</button>
+              </div>
+            </div>
             </div>
             <div className="">
               <h1 className="my-4 text-[26px] text-end">{hadith.ar}</h1>
               <h1 className="my-4 text-[#2B9E76]">{hadith.narrator} থেকে বর্ণিত:</h1>
               <h1 className="my-4">{hadith.bn}</h1>
             </div>
-            <div className="flex justify-between items-center mt-7">
-              <div className="flex items-center text-[12px] gap-3">
+            <div className="w-[95%] h-[1px] bg-slate-200 m-auto"></div>
+            <div className="flex md:justify-between justify-center items-center mt-7">
+              <div className="md:flex  items-center text-[12px] gap-3  hidden">
               <p>হাদিসের মান :</p>
               <button className="p-2 rounded-[8px] text-white font-bold bg-[#2B9E76]">সহিহ হাদিস</button>
               </div>
