@@ -23,4 +23,17 @@ body{
     body{
         background-color: #F1F5F9;
     }
+    .hadisSideBer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: 0.9s;
+    }
+    .hadisSideBerHidden{
+        position: absolute;
+        top: 0;
+        left: -2000px;
+        transition: 0.9s;
+    }
   }

@@ -22,7 +22,7 @@ const HadisName = () => {
         fetchData();
     }, []);
     return (
-        <div className='w-full bg-white rounded-[11px] p-5 my-5'>
+        <div className='w-full bg-white rounded-[11px] p-5 md:my-5 md:mb-0 mb-5'>
             {
                 chapters.map((chapter)=>
                 <div
