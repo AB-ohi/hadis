@@ -36,4 +36,17 @@ body{
         left: -2000px;
         transition: 0.9s;
     }
+
+    .setting{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition: 0.9s;
+    }
+    .settingHidden{
+        position: absolute;
+        top: -2000px;
+        transition: 0.9s;
+    }
   }
