@@ -39,8 +39,17 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    <div>
-      {/* <SideList/> */}
+    <div className=''>
+    <div className="flex items-center gap-2 p-2 border-none border-2 rounded-[11px] bg-white border-gray-300">
+          <CiSearch className="text-xl" />
+          <input
+            className="outline-none"
+            type="search"
+            name=""
+            placeholder="Search Hadith"
+            id=""
+          />
+        </div>
     </div>
     </div>
   );
