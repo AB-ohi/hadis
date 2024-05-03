@@ -86,4 +86,19 @@ body{
         top: -2000px;
         transition: 0.9s;
     }
+    .leftSide{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        transition: 0.9s;
+        background-color: white;
+    }
+    .leftSideHidden{
+        position: absolute;
+        height: 100%;
+        right: -2000px;
+        transition: 0.9s;
+        background-color: white;
+    }
   }

@@ -7,10 +7,22 @@ import hand from "../../public/helping-hand.svg";
 import { CiSearch } from "react-icons/ci";
 import "../app/globals.css";
 import { RiSettings2Fill } from "react-icons/ri";
-import LeftSideBer from "./LeftSideBer";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
-  const [settingOpen,setSettingOpen] = useState(false)
+  const [settingOpen,setSettingOpen] = useState(false);
+  const [leftSideBer, setLeftSideBer] = useState(false);
+  const [arValue, setArValue] = useState(23);
+  const [bnValue, setBnValue] = useState(25);
+
+  const handleChange = (env) => {
+    setArValue(env.target.value);
+  };
+  
+  const handelBnChange = (env) =>{
+    setBnValue(env.target.value);
+
+  }
   return (
     <div className="top-0 md:relative fixed w-full">
       <div className="flex md:gap-0 gap-3 items-center justify-between  bg-white py-3 px-2 nav">
@@ -43,7 +55,7 @@ const Navbar = () => {
             <p>সাপোর্ট করুন</p>
             <Image src={hand} alt="hand" />
           </div>
-          <div className="p-2 md:hidden block rounded-[8px] bg-[#2B9E76] text-white ">
+          <div onClick={()=> setLeftSideBer(true)} className="p-2 md:hidden block rounded-[8px] bg-[#2B9E76] text-white ">
             <RiSettings2Fill className="text-[20px]" />
           </div>
         </div>
@@ -100,9 +112,71 @@ const Navbar = () => {
                 <button className="w-[50%] bg-[#2B9E76] text-white py-2 rounded-[8px]">সার্চ করুন</button>
               </div>
         </div>
-      <div>
-      <LeftSideBer/>
+     
       </div>
+      <div className={`${leftSideBer? "h-[85vh] md:rounded-[15px] md:hidden bg-[#3d3d3d62] w-full  leftSide z-10":"leftSideHidden md:hidden  w-full z-10 flex items-center"}`}>
+        <div className="m-auto w-[90%]">
+      <div className="bg-white p-4 rounded-[11px]">
+        <div className="flex justify-between items-center">
+        <h1 className="text-center text-[22px]">সেটিংস</h1>
+        <RxCross2  onClick={()=>setLeftSideBer(false)}/>
+        </div>
+        <p className="mt-7 mb-4">আরবি ফন্ট সিলেক্ট করুন</p>
+        <select
+          className="w-full outline-none border-solid border-[1px] border-gray-200 p-3 rounded-[11px] mb-7"
+          name=""
+          id=""
+        >
+          <option value="">KFGQ</option>
+          <option value="">Me Quran</option>
+          <option value="">Al Mushaf</option>
+          <option value="">Amiri</option>
+          <option value="">Arial</option>
+        </select>
+        <p>এরাবিক ফন্ট সাইজ</p>
+        <div className="flex items-center gap-5 my-3">
+          <input
+            type="range"
+            value={arValue}
+            min="0"
+            max="100"
+            onChange={handleChange}
+            className="slider"
+            name=""
+            id=""
+          />
+          <p>{arValue}</p>
+        </div>
+        <p>অনুবাদ ফন্ট সাইজ</p>
+        <div className="flex items-center gap-5 my-3">
+          <input
+            type="range"
+            value={bnValue}
+            min="0"
+            max="100"
+            onChange={handelBnChange}
+            className="slider"
+            name=""
+            id=""
+          />
+          <p>{bnValue}</p>
+        </div>
+        <div>
+          <p></p>
+        </div>
+      </div>
+      <div className="  rounded-[15px] p-4 text-white  bg-[#2B9E76] mt-5">
+        <h1 className="text-center text-[30px] mb-4">
+          আপনিও সদাকায়ে জারিয়াতে অংশ নিন
+        </h1>
+        <p>
+          আপনার দান, সেটা ছোট হলেও, ইসলামের বার্তা ও হাদিস প্রচারে সহায়তা করবে।
+          আমাদের কাজের অংশ হতে এবং এই গুরুত্বপূর্ণ কাজে সাহায্য করতে আমাদের
+          প্রজেক্টে হাদিয়া দিন। ইনশাআল্লাহ এটি সদাকায়ে জারিয়াহ হিসেবে আল্লাহ্‌র
+          কাছে কবুল হবে।
+        </p>
+      </div>
+    </div>
       </div>
     </div>
   );

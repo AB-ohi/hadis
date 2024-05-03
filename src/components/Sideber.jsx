@@ -30,7 +30,7 @@ const SideList = () => {
         },
     ]
     return (
-        <div className='my-auto md:w-24 w-full flex items-center justify-center gap-10  md:flex-col bg-white  bottom-0 md:relative fixed sideNav'
+        <div className='my-auto md:w-24 w-full flex items-center justify-center gap-10 z-0 md:flex-col bg-white  bottom-0 md:relative fixed sideNav'
         >
             {
                 SideLists.map((SideList, index)=>

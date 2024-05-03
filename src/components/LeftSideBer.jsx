@@ -15,7 +15,7 @@ const LeftSideBer = () => {
   }
 
   return (
-    <div className=" h-[85vh] md:block hidden md:w-1/5 w-[90%]">
+    <div className=" h-[85vh] md:block hidden mr-3 md:w-1/5 w-[90%]">
       <div className="bg-white p-4 rounded-[11px]">
         <h1 className="text-center text-[22px]">সেটিংস</h1>
         <p className="mt-7 mb-4">আরবি ফন্ট সিলেক্ট করুন</p>
