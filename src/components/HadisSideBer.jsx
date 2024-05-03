@@ -107,8 +107,8 @@ const HadisSideBer = () => {
                     <p className="hexagon">B</p>
                   </div>
                   <div>
-                    <h1>{book.title}</h1>
-                    <p>সর্বমোট হাদিস -{book.number_of_hadis}</p>
+                    <h1 className="text-[17px] mb-2">{book.title}</h1>
+                    <p className="text-[12px] text-slate-400">সর্বমোট হাদিস -{book.number_of_hadis}</p>
                   </div>
                 </button>
               ))}
