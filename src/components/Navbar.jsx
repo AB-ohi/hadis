@@ -7,6 +7,7 @@ import hand from "../../public/helping-hand.svg";
 import { CiSearch } from "react-icons/ci";
 import "../app/globals.css";
 import { RiSettings2Fill } from "react-icons/ri";
+import LeftSideBer from "./LeftSideBer";
 
 const Navbar = () => {
   const [settingOpen,setSettingOpen] = useState(false)
@@ -99,6 +100,9 @@ const Navbar = () => {
                 <button className="w-[50%] bg-[#2B9E76] text-white py-2 rounded-[8px]">সার্চ করুন</button>
               </div>
         </div>
+      <div>
+      <LeftSideBer/>
+      </div>
       </div>
     </div>
   );
